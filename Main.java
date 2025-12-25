@@ -1,25 +1,16 @@
-public class Main {
-    public static void main(String[] args) {
+public class Movie {
+    private String title;
+    private String genre;
 
-        String firstName = "Sandy";
-        String lastName = "Jones";
-        String movieTitle = "The Source Code";
-        int numberOfTickets = 8;
-        double pricePerTicket = 10.57;
+    public Movie(String title, String genre) {
+        this.title = title;
+        this.genre = genre;
+    }
 
-        double totalPrice = numberOfTickets * pricePerTicket;
-
-        String userName = (firstName +" "+ lastName).toUpperCase();
-
-        String movieName = movieTitle.toLowerCase();
-
-        System.out.println("Congratulations! You have successfully booked the tickets:\n");
-        System.out.println("Username: " + userName);
-        System.out.println("Movie: " + movieName);
-        System.out.println("Number of Tickets: " + numberOfTickets);
-        System.out.println("Price per ticket: $" + pricePerTicket);
-        System.out.println("Total price of " + numberOfTickets + " tickets: $" + totalPrice);
-        System.out.println("\nThank you!!! for choosing us for booking your movie tickets.");
-        System.out.println("Enjoy your movie! :))");
+    public String getTitle() { 
+        return title; 
+    }
+    public String getGenre() { 
+        return genre; 
     }
 }
