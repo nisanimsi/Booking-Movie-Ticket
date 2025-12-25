@@ -1,16 +1,25 @@
-public class Movie {
-    private String title;
-    private String genre;
+import java.util.Scanner;
 
-    public Movie(String title, String genre) {
-        this.title = title;
-        this.genre = genre;
-    }
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-    public String getTitle() { 
-        return title; 
-    }
-    public String getGenre() { 
-        return genre; 
+        // Örnek Film Listesi
+        Movie movie1 = new Movie("Interstellar", "Sci-Fi");
+        
+        System.out.println("=== Film Bilet Rezervasyon Sistemi ===");
+        System.out.print("Adınız: ");
+        String name = scanner.nextLine();
+        
+        System.out.print("Koltuk seçiniz (1-50): ");
+        int seat = scanner.nextInt();
+
+        // Bilet oluşturma
+        Ticket myTicket = new Ticket(movie1, name, seat);
+        
+        System.out.println("\nRezervasyon Başarılı!");
+        myTicket.displayTicketInfo();
+
+        scanner.close();
     }
 }
